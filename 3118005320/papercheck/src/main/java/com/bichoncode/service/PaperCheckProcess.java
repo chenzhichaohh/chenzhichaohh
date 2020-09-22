@@ -1,6 +1,4 @@
-package com.bichoncode.interfaces;
-
-import java.util.List;
+package com.bichoncode.service;
 
 /**
  * @author BichonCode

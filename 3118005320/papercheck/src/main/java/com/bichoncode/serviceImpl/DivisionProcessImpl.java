@@ -1,6 +1,6 @@
-package com.bichoncode.intfacesImpl;
+package com.bichoncode.serviceImpl;
 
-import com.bichoncode.interfaces.DivisionProcess;
+import com.bichoncode.service.DivisionProcess;
 import org.wltea.analyzer.core.IKSegmenter;
 import org.wltea.analyzer.core.Lexeme;
 import java.io.IOException;

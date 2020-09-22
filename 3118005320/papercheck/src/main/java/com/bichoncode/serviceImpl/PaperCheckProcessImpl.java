@@ -1,8 +1,8 @@
-package com.bichoncode.intfacesImpl;
+package com.bichoncode.serviceImpl;
 
 
-import com.bichoncode.interfaces.DivisionProcess;
-import com.bichoncode.interfaces.PaperCheckProcess;
+import com.bichoncode.service.DivisionProcess;
+import com.bichoncode.service.PaperCheckProcess;
 import java.util.*;
 
 /**
@@ -109,8 +109,10 @@ public class PaperCheckProcessImpl implements PaperCheckProcess {
         }
         // 初始结果
         double initresult = dotProduct / (Math.sqrt(sunOfSquares1) * Math.sqrt(sunOfSquares2));
+        System.out.println(initresult);
         // 保留两位小数的结果
         double result = Double.parseDouble(String.format("%.2f", initresult));
+        System.out.println(result);
         return result;
     }
 }

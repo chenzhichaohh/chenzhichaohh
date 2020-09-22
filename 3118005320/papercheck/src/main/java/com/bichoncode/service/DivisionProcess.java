@@ -1,6 +1,5 @@
-package com.bichoncode.interfaces;
+package com.bichoncode.service;
 
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -13,7 +12,7 @@ public interface DivisionProcess {
     /**
      * 使用ik分词器分词
      * 将原文本分词，转化成集合
-     * @param sourceTxt
+     * @param text
      * @return
      */
     List<String> ikDivideStrategy(String text);

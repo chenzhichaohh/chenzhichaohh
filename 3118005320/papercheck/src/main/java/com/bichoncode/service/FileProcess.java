@@ -1,6 +1,4 @@
-package com.bichoncode.interfaces;
-
-import java.util.List;
+package com.bichoncode.service;
 
 /**
  * @author BichonCode
@@ -17,5 +15,6 @@ public interface FileProcess {
      */
     String txtToString(String fileName);
 
+    void writeToDisk(String fileName, String content);
 
 }

@@ -1,10 +1,10 @@
 
-import com.bichoncode.interfaces.DivisionProcess;
-import com.bichoncode.interfaces.FileProcess;
-import com.bichoncode.interfaces.PaperCheckProcess;
-import com.bichoncode.intfacesImpl.DivisionProcessImpl;
-import com.bichoncode.intfacesImpl.FileProcessImpl;
-import com.bichoncode.intfacesImpl.PaperCheckProcessImpl;
+import com.bichoncode.service.DivisionProcess;
+import com.bichoncode.service.FileProcess;
+import com.bichoncode.service.PaperCheckProcess;
+import com.bichoncode.serviceImpl.DivisionProcessImpl;
+import com.bichoncode.serviceImpl.FileProcessImpl;
+import com.bichoncode.serviceImpl.PaperCheckProcessImpl;
 import org.junit.jupiter.api.Test;
 
 
