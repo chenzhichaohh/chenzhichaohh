@@ -115,8 +115,8 @@ public class PaperCheckProcessImpl implements PaperCheckProcess {
         double initresult = dotProduct / (Math.sqrt(sunOfSquares1) * Math.sqrt(sunOfSquares2));
         // 保留两位小数的结果
         DecimalFormat df = new DecimalFormat("#.00");
-        double result = Double.parseDouble(df.format(initresult));
-        return result;
+        return Double.parseDouble(df.format(initresult));
+
     }
 
 
@@ -142,8 +142,8 @@ public class PaperCheckProcessImpl implements PaperCheckProcess {
         // 保留两位小数的结果
         DecimalFormat df = new DecimalFormat("#.00");
 
-        double result = Double.parseDouble(df.format(initResult));
-        return result;
+        return Double.parseDouble(df.format(initResult));
+
     }
 
     /**
@@ -172,8 +172,7 @@ public class PaperCheckProcessImpl implements PaperCheckProcess {
                 }
             }
         }
-        int length = dp[objects1.length - 1][objects2.length - 1];
-        return length;
+        return dp[objects1.length - 1][objects2.length - 1];
     }
 
     @Override
@@ -182,7 +181,6 @@ public class PaperCheckProcessImpl implements PaperCheckProcess {
         double result2 = this.lcs(article1, article2);
         DecimalFormat df = new DecimalFormat("#.00");
 
-        double result = Double.parseDouble(df.format((result1 + result2) / 2.0));
-        return result;
+        return Double.parseDouble(df.format((result1 + result2) / 2.0));
     }
 }

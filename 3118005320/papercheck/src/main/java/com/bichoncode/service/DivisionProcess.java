@@ -12,7 +12,7 @@ import java.util.List;
 public interface DivisionProcess {
     /**
      * 使用ik分词器分词
-     * 将原文本分词，转化成集合
+     * 将原文本分词，分词之存储在集合中
      * @param text
      * @return
      */

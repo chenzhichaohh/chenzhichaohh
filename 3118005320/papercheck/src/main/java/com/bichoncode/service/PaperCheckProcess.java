@@ -17,7 +17,19 @@ public interface PaperCheckProcess {
      */
     double cosineSimirity(String article1, String article2) throws IOException;
 
+    /**
+     * 使用lcs算法计算最长子串的长度，并返回长度
+     * @param article1
+     * @param article2
+     * @return
+     */
     double lcs(String article1, String article2) throws IOException;
 
+    /**
+     * 综合余弦算法和lcs算法
+     * @param article1
+     * @param article2
+     * @return
+     */
     double getSimilarity(String article1, String article2) throws IOException;
 }

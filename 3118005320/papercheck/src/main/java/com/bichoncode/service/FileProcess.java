@@ -17,6 +17,12 @@ public interface FileProcess {
      */
     String txtToString(String fileName);
 
+    /**
+     * 将结果写入文件中
+     * @param fileName
+     * @param content
+     * @throws IOException
+     */
     void writeToDisk(String fileName, String content) throws IOException;
 
 }
