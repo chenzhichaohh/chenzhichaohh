@@ -30,19 +30,27 @@ public class FileProcessImpl implements FileProcess {
             e.printStackTrace();
             System.out.println("文件读取出错，请确认输入的路径和文件名是否正确，以及文件类型是否正确！！");
         }
-
         return stringBuilder.toString();
 
     }
 
     @Override
     public void writeToDisk(String fileName, String content) {
-        //fileName = "D:aaa.txt";
+        File file = new File(fileName);
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                System.out.println("请输入正确的生成文件的路径和名称");
+                e.printStackTrace();
+            }
+        }
         FileOutputStream fileOutputStream = null;
         try {
             fileOutputStream = new FileOutputStream(fileName);
             fileOutputStream.write(content.getBytes());
         } catch (FileNotFoundException e) {
+            System.out.println("请输入正确的文件路径和文件名称");
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -54,7 +62,7 @@ public class FileProcessImpl implements FileProcess {
             }
         }
 
-        System.out.println("结果为:" + content + "已经写入" + fileName);
+        System.out.println("相似度为:" + content + "  已经写入" + fileName);
 
     }
 }

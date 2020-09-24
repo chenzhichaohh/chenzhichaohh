@@ -14,4 +14,8 @@ public interface PaperCheckProcess {
      * @return
      */
     double cosineSimirity(String article1, String article2);
+
+    double lcs(String article1, String article2);
+
+    double getSimilarity(String article1, String article2);
 }
