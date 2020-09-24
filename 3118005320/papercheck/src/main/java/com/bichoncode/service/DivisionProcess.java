@@ -1,5 +1,6 @@
 package com.bichoncode.service;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -15,5 +16,5 @@ public interface DivisionProcess {
      * @param text
      * @return
      */
-    List<String> ikDivideStrategy(String text);
+    List<String> ikDivideStrategy(String text) throws IOException;
 }

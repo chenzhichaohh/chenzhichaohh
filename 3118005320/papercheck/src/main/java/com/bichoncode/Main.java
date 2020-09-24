@@ -8,6 +8,7 @@ import com.bichoncode.serviceImpl.DivisionProcessImpl;
 import com.bichoncode.serviceImpl.FileProcessImpl;
 import com.bichoncode.serviceImpl.PaperCheckProcessImpl;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -16,14 +17,14 @@ import java.util.concurrent.TimeUnit;
  * @create 2020/09/22
  */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         long l1 = System.currentTimeMillis();
 
-        // 参数校验
+        // ����У��
         int argsLength = args.length;
         if (argsLength != 3) {
-            System.out.println("请输入三个正确的参数");
-            throw new CustomException("方法参数异常");
+            System.out.println("������������ȷ�Ĳ���");
+            throw new CustomException("���������쳣");
         }
 
         FileProcess fileProcess = new FileProcessImpl();

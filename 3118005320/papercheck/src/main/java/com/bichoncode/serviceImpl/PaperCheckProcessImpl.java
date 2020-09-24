@@ -4,6 +4,7 @@ package com.bichoncode.serviceImpl;
 import com.bichoncode.service.DivisionProcess;
 import com.bichoncode.service.PaperCheckProcess;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.*;
 
@@ -15,13 +16,12 @@ import java.util.*;
 public class PaperCheckProcessImpl implements PaperCheckProcess {
 
     @Override
-    public double cosineSimirity(String article1, String article2) {
+    public double cosineSimirity(String article1, String article2) throws IOException {
         DivisionProcess divisionProcess = new DivisionProcessImpl();
         List<String> articleList1 = divisionProcess.ikDivideStrategy(article1);
         List<String> articleList2 = divisionProcess.ikDivideStrategy(article2);
         // 将两个集合合并，并且去重
         List<String> mergeList = this.mergeList(articleList1, articleList2);
-
         // 将合并后的集合的每个元素存进map中，目的是为了给每个元素标号
         // key是list的集合元素，value是序号
         Map<String, Integer> map = new HashMap<>();
@@ -127,7 +127,7 @@ public class PaperCheckProcessImpl implements PaperCheckProcess {
      * @return
      */
     @Override
-    public double lcs(String article1, String article2) {
+    public double lcs(String article1, String article2) throws IOException {
         DivisionProcess divisionProcess = new DivisionProcessImpl();
         List<String> articleList1 = divisionProcess.ikDivideStrategy(article1);
         // 把集合转化成数组
@@ -177,7 +177,7 @@ public class PaperCheckProcessImpl implements PaperCheckProcess {
     }
 
     @Override
-    public double getSimilarity(String article1, String article2) {
+    public double getSimilarity(String article1, String article2) throws IOException {
         double result1 = this.cosineSimirity(article1, article2);
         double result2 = this.lcs(article1, article2);
         DecimalFormat df = new DecimalFormat("#.00");

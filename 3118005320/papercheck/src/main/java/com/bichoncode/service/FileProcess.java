@@ -1,5 +1,7 @@
 package com.bichoncode.service;
 
+import java.io.IOException;
+
 /**
  * @author BichonCode
  * @mail chenzhichaohh@163.com
@@ -15,6 +17,6 @@ public interface FileProcess {
      */
     String txtToString(String fileName);
 
-    void writeToDisk(String fileName, String content);
+    void writeToDisk(String fileName, String content) throws IOException;
 
 }

@@ -1,5 +1,7 @@
 package com.bichoncode.service;
 
+import java.io.IOException;
+
 /**
  * @author BichonCode
  * @mail chenzhichaohh@163.com
@@ -13,9 +15,9 @@ public interface PaperCheckProcess {
      * @param article2
      * @return
      */
-    double cosineSimirity(String article1, String article2);
+    double cosineSimirity(String article1, String article2) throws IOException;
 
-    double lcs(String article1, String article2);
+    double lcs(String article1, String article2) throws IOException;
 
-    double getSimilarity(String article1, String article2);
+    double getSimilarity(String article1, String article2) throws IOException;
 }

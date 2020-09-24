@@ -3,6 +3,7 @@ package com.bichoncode.serviceImpl;
 import com.bichoncode.service.DivisionProcess;
 import org.wltea.analyzer.core.IKSegmenter;
 import org.wltea.analyzer.core.Lexeme;
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -15,19 +16,15 @@ import java.util.List;
  */
 public class DivisionProcessImpl implements DivisionProcess {
     @Override
-    public List<String> ikDivideStrategy(String text) {
+    public List<String> ikDivideStrategy(String text) throws IOException {
         StringReader stringReader = new StringReader(text);
         IKSegmenter ikSegmenter = new IKSegmenter(stringReader, true);
         List<String> list = new ArrayList<>();
-        Lexeme lex=null;
-        while(true){
-            try {
-                if (!((lex=ikSegmenter.next())!=null)) {
-                    break;
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.out.println("分词出错");
+        Lexeme lex = null;
+        while (true) {
+
+            if (!((lex = ikSegmenter.next()) != null)) {
+                break;
             }
             String lexemeText = lex.getLexemeText();
             list.add(lexemeText);
