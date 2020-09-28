@@ -1,6 +1,7 @@
 package com.bichoncode.serviceImpl;
 
 import com.bichoncode.service.DivisionProcess;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -14,10 +15,21 @@ import static org.junit.jupiter.api.Assertions.*;
  * @create 2020/09/24
  */
 class DivisionProcessImplTest {
+    static DivisionProcess divisionProcess;
+
+    @BeforeAll
+    static void init() {
+        divisionProcess = new DivisionProcessImpl();
+        System.out.println(1111);
+    }
+
+
     @Test
     void  ikDivideStrategyTest() throws IOException {
-        DivisionProcess divisionProcess = new DivisionProcessImpl();
         List<String> list = divisionProcess.ikDivideStrategy("你好， 吃饭了吗");
+        assertNotNull(list);
         System.out.println(list);
     }
+
+
 }

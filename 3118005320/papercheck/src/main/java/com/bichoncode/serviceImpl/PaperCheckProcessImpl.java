@@ -180,7 +180,6 @@ public class PaperCheckProcessImpl implements PaperCheckProcess {
         double result1 = this.cosineSimirity(article1, article2);
         double result2 = this.lcs(article1, article2);
         DecimalFormat df = new DecimalFormat("#.00");
-
         return Double.parseDouble(df.format((result1 + result2) / 2.0));
     }
 }
